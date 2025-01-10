@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Verdana', sans-serif;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        .grid-item {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        .grid-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .grid-item h2 {
+            color: #00509e;
+            margin-bottom: 12px;
+        }
+        .grid-item p {
+            color: #555;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>Dynamic Grid Design</header>
+    <div class="grid-container">
+        <div class="grid-item">
+            <h2>Creative Concept</h2>
+            <p>Explore the power of grid layouts to build clean and efficient designs for your projects.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Responsive Layout</h2>
+            <p>Ensure flexibility in your designs with grids that adjust seamlessly across devices.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Interactive Features</h2>
+            <p>Add hover effects and transitions to make your layout more engaging and dynamic.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Modern Approach</h2>
+            <p>Utilize minimalist styles to create a professional yet visually appealing structure.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Adaptable Content</h2>
+            <p>Organize text and visuals in a way that feels natural and intuitive to the user.</p>
+        </div>
+        <div class="grid-item">
+            <h2>Scalable Design</h2>
+            <p>Create layouts that can grow and adapt as your content or features expand.</p>
+        </div>
+    </div>
+    <footer>&copy; 2025 copyrights. All rights reserved.</footer>
+</body>
+</html>
