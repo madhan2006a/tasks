@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Flex Gallery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      max-width: 1200px;
+      padding: 16px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item {
+      flex: 1 1 calc(25% - 16px); /* Adjust size based on screen width */
+      max-width: calc(25% - 16px); /* Set a fixed max width */
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #ddd;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+
+    @media (max-width: 1024px) {
+      .gallery-item {
+        flex: 1 1 calc(33.33% - 16px);
+        max-width: calc(33.33% - 16px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-item {
+        flex: 1 1 calc(50% - 16px);
+        max-width: calc(50% - 16px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.Nko5X2PMguaoDGc6MrUpmwHaEK&rs=1&pid=ImgDetMain" alt="Gallery Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.C0eivypupINla4175iAheAHaEK&rs=1&pid=ImgDetMain" alt="Gallery Image 2">
+    </div>
+    <div class="gallery-item">
+      <img src="https://th.bing.com/th/id/R.f01412be137b7d22c934ce61125e5ced?rik=B7PWmWk95as2kA&riu=http%3a%2f%2fhd.wallpaperswide.com%2fthumbs%2fmarvels_spiderman-t2.jpg&ehk=61oLIqDMnqjdnvvUHKy%2fGminYjss40wVPG87mpNImYQ%3d&risl=&pid=ImgRaw&r=0" alt="Gallery Image 3">
+    </div>
+    <div class="gallery-item">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.6O9B3160LQXmviviXy0XcwAAAA&rs=1&pid=ImgDetMain" alt="Gallery Image 4">
+    </div>
+    <div class="gallery-item">
+      <img src="https://www.thehindu.com/sci-tech/article19104203.ece/ALTERNATES/LANDSCAPE_615/20bgmspiderman" alt="Gallery Image 5">
+    </div>
+    <div class="gallery-item">
+      <img src="https://tse2.mm.bing.net/th?id=OIP.apB0V4YHaTsEgxAsi45RKgHaD4&w=600&h=315&rs=1&pid=ImgDetMain" alt="Gallery Image 6">
+    </div>
+    <div class="gallery-item">
+      <img src="https://leganerd.com/wp-content/uploads/2023/10/marvels-spider-man-2-4.png" alt="Gallery Image 7">
+    </div>
+    <div class="gallery-item">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.xOnYiup0VQcnsF6qXSPxSQHaEc&rs=1&pid=ImgDetMain" alt="Gallery Image 8">
+    </div>
+  </div>
+</body>
+</html>

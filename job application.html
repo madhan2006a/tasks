@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .form-container {
+            margin-bottom: 40px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            margin-top: 0;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Job Application Forms</h1>
+
+    <!-- Form Model 1: Basic Job Application -->
+    <div class="form-container">
+        <h2>Basic Job Application</h2>
+        <form>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+    <!-- Form Model 2: Job Application with Experience Details -->
+    <div class="form-container">
+        <h2>Job Application with Experience Details</h2>
+        <form>
+            <label for="fullName2">Full Name:</label>
+            <input type="text" id="fullName2" name="fullName" placeholder="Enter your full name" required>
+
+            <label for="email2">Email Address:</label>
+            <input type="email" id="email2" name="email" placeholder="Enter your email" required>
+
+            <label for="experience">Years of Experience:</label>
+            <select id="experience" name="experience" required>
+                <option value="">Select...</option>
+                <option value="0-1">0-1 Years</option>
+                <option value="2-5">2-5 Years</option>
+                <option value="6-10">6-10 Years</option>
+                <option value="10+">10+ Years</option>
+            </select>
+
+            <label for="skills">Key Skills:</label>
+            <textarea id="skills" name="skills" rows="4" placeholder="List your skills" required></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+    <!-- Form Model 3: Detailed Job Application -->
+    <div class="form-container">
+        <h2>Detailed Job Application</h2>
+        <form>
+            <label for="fullName3">Full Name:</label>
+            <input type="text" id="fullName3" name="fullName" placeholder="Enter your full name" required>
+
+            <label for="email3">Email Address:</label>
+            <input type="email" id="email3" name="email" placeholder="Enter your email" required>
+
+            <label for="phone3">Phone Number:</label>
+            <input type="tel" id="phone3" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="linkedin">LinkedIn Profile:</label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="Enter your LinkedIn profile URL">
+
+            <label for="portfolio">Portfolio Website:</label>
+            <input type="url" id="portfolio" name="portfolio" placeholder="Enter your portfolio URL">
+
+            <label for="coverLetter">Cover Letter:</label>
+            <textarea id="coverLetter" name="coverLetter" rows="6" placeholder="Write a brief cover letter"></textarea>
+
+            <label for="resume3">Upload Resume:</label>
+            <input type="file" id="resume3" name="resume" accept=".pdf,.doc,.docx" required>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Newspaper Blog</title>
+  <style>
+    /* Basic reset and typography */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Merriweather', serif;
+      line-height: 1.6;
+      background-color: #f2f2f2;
+      color: #333;
+      padding: 16px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      text-align: center;
+      padding: 24px 0;
+      border-bottom: 2px solid #e0e0e0;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #222;
+    }
+
+    header p {
+      font-style: italic;
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    header .tagline {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .featured-article {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 24px 0;
+      background: #f9f9f9;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .featured-article img {
+      flex: 1 1 50%;
+      object-fit: cover;
+      max-height: 350px;
+    }
+
+    .featured-content {
+      flex: 1 1 50%;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-content h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      color: #222;
+    }
+
+    .featured-content p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .featured-content a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .featured-content a:hover {
+      color: #0056b3;
+    }
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .article {
+      flex: 1 1 calc(33.33% - 16px);
+      max-width: calc(33.33% - 16px);
+      background: #f4f4f4;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .article:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .article img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .article-content {
+      padding: 16px;
+    }
+
+    .article-title {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .article-title a {
+      text-decoration: none;
+      color: #222;
+      transition: color 0.3s ease;
+    }
+
+    .article-title a:hover {
+      color: #007bff;
+    }
+
+    .article-meta {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 12px;
+    }
+
+    .article-summary {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 32px;
+      padding: 24px 0;
+      border-top: 2px solid #e0e0e0;
+      color: #777;
+      background: #f9f9f9;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .article {
+        flex: 1 1 calc(50% - 16px);
+        max-width: calc(50% - 16px);
+      }
+
+      .featured-article {
+        flex-direction: column;
+      }
+
+      .featured-article img {
+        max-height: 250px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .article {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      .featured-article img {
+        max-height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>The Premium Daily</h1>
+      <p>Your gateway to the latest news and insights</p>
+      <p class="tagline">"Where stories come to life"</p>
+    </header>
+
+    <!-- Featured Article Section -->
+    <div class="featured-article">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.GikXjhpkDF_Ai7GWINy8JwHaFj&rs=1&pid=ImgDetMain" alt="Featured Article">
+      <div class="featured-content">
+        <h2>Breaking: Major Event Shaping the Future</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Integer id tincidunt eros...</p>
+        <a href="#">Read More &raquo;</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Article 1 -->
+      <div class="article">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.rSD0iDbaSgEvNutNJ6a49gHaDS&rs=1&pid=ImgDetMain" alt="Article 1">
+        <div class="article-content">
+          <h2 class="article-title"><a href="#">Technology: A Leap Forward</a></h2>
+          <p class="article-meta">January 10, 2025 | By Tech Reporter</p>
+          <p class="article-summary">Phasellus auctor est at dolor convallis, at tincidunt urna aliquet. Suspendisse...</p>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="article">
+        <img src="https://media-cdn.socastsrm.com/wordpress/wp-content/blogs.dir/1785/files/2018/03/sports-schedule.jpg" alt="Article 2">
+        <div class="article-content">
+          <h2 class="article-title"><a href="#">Sports: The Journey to Victory</a></h2>
+          <p class="article-meta">January 9, 2025 | By Sports Reporter</p>
+          <p class="article-summary">Cras ac libero aliquam, vulputate nulla sit amet, consectetur lacus. Donec sed...</p>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="article">
+        <img src="https://thumbs.dreamstime.com/z/health-crisis-news-headlines-public-emergency-danger-warning-d-illustration-health-crisis-news-headlines-public-emergency-danger-192446910.jpg" alt="Article 3">
+        <div class="article-content">
+          <h2 class="article-title"><a href="#">Health: Secrets to Longevity</a></h2>
+          <p class="article-meta">January 8, 2025 | By Health Expert</p>
+          <p class="article-summary">Aenean facilisis leo vel augue malesuada, in tempor justo hendrerit. Vivamus...</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 The Premium Daily. All rights reserved. | Designed with passion.</p>
+    </footer>
+  </div>
+</body>
+</html>
