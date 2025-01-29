@@ -1,46 +1,40 @@
-
-
 import React, { useState } from "react";
+import ProductList from "./components/ProductList";
+import Filter from "./components/Filter";
 import "./App.css";
 
-function App() {
-  const [tasks, setTasks] = useState([]);
-  const [taskInput, setTaskInput] = useState("");
+const App = () => {
+  const [products] = useState([
+    { id: 1, name: "Laptop", category: "Electronics", price: 500 },
+    { id: 2, name: "Headphones", category: "Electronics", price: 50 },
+    { id: 3, name: "T-shirt", category: "Clothing", price: 20 },
+    { id: 4, name: "Jeans", category: "Clothing", price: 40 },
+    { id: 5, name: "Coffee Maker", category: "Home Appliances", price: 70 },
+  ]);
 
-  const addTask = () => {
-    if (taskInput.trim()) {
-      setTasks([...tasks, taskInput]);
-      setTaskInput("");
+  const [filteredProducts, setFilteredProducts] = useState(products);
+
+  const handleFilter = (filters) => {
+    let filtered = products;
+
+    if (filters.category) {
+      filtered = filtered.filter((product) => product.category === filters.category);
     }
-  };
 
-  const deleteTask = (index) => {
-    const newTasks = tasks.filter((_, i) => i !== index);
-    setTasks(newTasks);
+    if (filters.price) {
+      filtered = filtered.filter((product) => product.price <= filters.price);
+    }
+
+    setFilteredProducts(filtered);
   };
 
   return (
-    <div className="container">
-      <h1>IV's To-Do List</h1>
-      <input
-        type="text"
-        value={taskInput}
-        onChange={(e) => setTaskInput(e.target.value)}
-        placeholder="Add a new task..."
-      />
-      <button onClick={addTask}>Add Task</button>
-      <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>
-            {task}
-            <button className="deleteBtn" onClick={() => deleteTask(index)}>
-              X
-            </button>
-          </li>
-        ))}
-      </ul>
+    <div className="app">
+      <h1>Product Filter</h1>
+      <Filter onFilter={handleFilter} />
+      <ProductList products={filteredProducts} />
     </div>
   );
-}
+};
 
 export default App;

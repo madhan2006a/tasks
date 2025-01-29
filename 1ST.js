@@ -5,7 +5,7 @@ for(i=0;i<=15;i++){
 
 let sum =0;
 for(i=0;i<=50;i++){
-    sum=sum+i;
+    sum=sum+i;NPM
 }
 console.log("Sum of numbers from 1 - 50 is ",sum);
 
